@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "export",
-    distDir: 'out',
-    basePath: "/firma-andreas-mucha",
+    basePath: "/nextjs-github-pages",
 };
 
 export default nextConfig;

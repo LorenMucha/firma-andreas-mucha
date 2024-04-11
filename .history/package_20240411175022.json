@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && touch ./out/.nojekyll && gh-pages -d ./out/ -t true"
+    "export": "next export",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ./.next"
   },
   "dependencies": {
     "gh-pages": "^6.1.1",
