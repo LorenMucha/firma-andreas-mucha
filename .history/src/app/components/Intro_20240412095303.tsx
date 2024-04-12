@@ -1,4 +1,4 @@
-import { FaHandsClapping } from "react-icons/fa6"
+import { FaHandsClapping } from "react-icons/fa6";
 
 
 const Intro = (): React.JSX.Element =>
@@ -6,6 +6,6 @@ const Intro = (): React.JSX.Element =>
         <div className="font-extrabold text-8xl text-black">Firma Andreas Mucha</div>
         <div> <FaHandsClapping className="text-yellow-600 ml-5" size={"5.5rem"} />
         </div>
-    </div>
+    </div>;
 
 export default Intro

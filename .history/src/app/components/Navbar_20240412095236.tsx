@@ -1,0 +1,1 @@
+const Navbar = (): React.JSX.Element =>

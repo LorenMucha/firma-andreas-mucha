@@ -1,4 +1,4 @@
-import { FaHandsClapping } from "react-icons/fa6"
+import { FaHandsClapping } from "react-icons/fa6";
 
 
 const Intro = (): React.JSX.Element =>
