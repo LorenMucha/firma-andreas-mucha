@@ -30,3 +30,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.carousel-control-color{
+  @apply text-blue-900
+}

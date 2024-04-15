@@ -8,7 +8,7 @@ const Leistungen = [
 
 const Intro = (): React.JSX.Element =>
     <div className="w-screen h-screen flex flex-col justify-center items-center bg-white">
-        <CCarousel controls indicators>
+        <CCarousel controls indicators wrap={false}>
             {Leistungen.map((leistung, index) => (
                 <CCarouselItem key={index} className="w-100 p-5">
                     <CImage align="center" width={1400} rounded src={leistung.image} alt="slide 1" />
