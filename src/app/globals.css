@@ -31,6 +31,10 @@ body {
   }
 }
 
-.carousel-control-color{
-  @apply text-blue-900
+.carousel-control-next-icon {
+  @apply border border-white
+}
+
+.carousel-control-prev-icon {
+  @apply border border-white
 }
