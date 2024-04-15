@@ -1,0 +1,23 @@
+import { CCarousel, CCarouselItem, CImage } from "@coreui/react"
+
+const Intro = (): React.JSX.Element =>
+    <div className="w-screen h-screen section flex justify-center items-center bg-white">
+        <div className="grid gr">
+            <div className="font-extrabold text-8xl text-black w-100">Firma Andreas Mucha</div>
+            <div>
+                <CCarousel controls indicators>
+                    <CCarouselItem>
+                        <CImage className="object-cover w-96 h-48" src="/images/bad.jpg" alt="slide 1" />
+                    </CCarouselItem>
+                    <CCarouselItem>
+                        <CImage className="object-cover w-96 h-48" src="/images/dach.jpg" alt="slide 2" />
+                    </CCarouselItem>
+                    <CCarouselItem>
+                        <CImage className="object-cover w-96 h-48" src="/images/heizung.JPG" alt="slide 3" />
+                    </CCarouselItem>
+                </CCarousel>
+            </div>
+        </div>
+    </div>
+
+export default Intro
