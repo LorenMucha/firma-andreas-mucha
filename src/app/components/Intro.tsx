@@ -1,31 +1,14 @@
 import { CImage } from "@coreui/react"
 
-const Leistungen = [
-    { image: "/images/bad.jpg", title: "Bad" },
-    { image: "/images/dach.jpg", title: "Dach" },
-    { image: "/images/heizung.JPG", title: "Heizung" }
-]
+const images = ['dach/dach_intro.svg', 'haustechnik/haustechnik_intro.svg', 'heizung/heizung_intro.svg', 'bad/bad_intro.svg']
 
 const Intro = (): React.JSX.Element =>
-    <div className="w-screen h-screen bg-white flex justify-center items-center flex-wrap">
-        <div className="container grid grid-cols-1 gap-3">
-            <div className="text-4xl text-black text-center">Herzlich Wilkommen </div>
-            <div className="flex justify-center items-center">
-                {Leistungen.map((leistung, index) => (
-                    <div key={index}>
-                        {<div className="max-w-sm rounded shadow-lg ml-5 hover:scale-110 ">
-                            <CImage className="w-full" src={leistung.image} />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2 text-blue-900">{leistung.title}</div>
-                                <p className="text-gray-700 text-base">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                                </p>
-                            </div>
-                        </div>
-                        }
-                    </div>
-                ))}
-            </div>
+    <div className="sm:w-full sm:h-screen bg-white flex sm:justify-center lg:items-center flex-col px-5">
+        <div className="text-2xl pb-2 sm:mt-0 mt-24 w-auto text-left"> Ihr Fachbetrieb für</div>
+        <div className="sm:ml-0 ml-4 grid grid-cols-2 gap-1 w-auto h-auto">
+            {images.map((image, index) => (
+                <CImage key={index} className="w-full duration-300 ease-in-out hover:scale-110" src={`/images/${image}`} />
+            ))}
         </div>
     </div>
 
