@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { CiMail } from "react-icons/ci";
+import { NavbarItem } from "../page";
 
-const Navbar = (): React.JSX.Element => {
+
+
+
+const Navbar = ({items}: {items: NavbarItem[]}): React.JSX.Element => {
     const [isOpen, setIsOpen] = useState(false);
-    const navbarItems = [
-        { text: 'Heizung', link: "#heizung" },
-        { text: 'Bad', link: "#bad" },
-        { text: 'Haustechnik', link: "#haustechnik" },
-        { text: 'Dach', link: "#dach" }]
+    
     return (
-        <nav className="shadow-lg fixed w-full top-0 z-10 px-3 py-3">
+        <nav className="navbar shadow-lg fixed w-full top-0 z-10 px-3 py-3 bg-white">
             <div className="mx-auto flex flex-grow items-center justify-between">
                 <div className="block lg:hidden">
                     <button
@@ -33,11 +33,11 @@ const Navbar = (): React.JSX.Element => {
                     </button>
                 </div>
                 <div className="lg:px-10 sm:w-1/3">
-                    <span className="font-bold text-2xl text-green-200">Andreas Mucha</span>
+                    <span className="text-green-200">Andreas Mucha</span>
                 </div>
                 <div className="flex flex-grow hidden lg:block">
                     <div className="text-sm flex-grow">
-                        {navbarItems.map((item, index) => (
+                        {items.map((item, index) => (
                             <a key={index} href={item.link} className="text-xl underline inline-block mt-0 text-black ml-6">
                                 {item.text}
                             </a>
@@ -49,9 +49,9 @@ const Navbar = (): React.JSX.Element => {
                     <CiMail size="2.5rem" className="sm:hidden" />
                 </div>
             </div>
-            <div className={`bg-white relative py-1 ${isOpen ? "block" : "hidden"}`}>
+            <div className={`bg-white relative py-1 ${isOpen ? "block" : "hidden"} z-50`}>
                 <ul>
-                    {navbarItems.map((item, index) => (
+                    {items.map((item, index) => (
                         <li key={index}>
                             <a className="block text-sm text-black underline px-2 py-1">{item.text}</a>
                         </li>

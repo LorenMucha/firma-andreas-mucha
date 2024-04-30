@@ -10,7 +10,8 @@ const config: Config = {
     colors: {
       'green-100': '#026100',
       'green-200': '#04B700',
-      'green-300': '#A4D9A3'
+      'green-300': '#A4D9A3',
+      'white': 'rgb(255 255 255)'
 
     },
     extend: {
