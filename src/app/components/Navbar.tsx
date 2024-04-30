@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { CiMail } from "react-icons/ci";
 import { NavbarItem } from "../page";
+import Link from "next/link";
 
 
 
 
-const Navbar = ({items}: {items: NavbarItem[]}): React.JSX.Element => {
+const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     return (
         <nav className="navbar shadow-lg fixed w-full top-0 z-10 px-3 py-3 bg-white">
             <div className="mx-auto flex flex-grow items-center justify-between">
@@ -38,14 +39,14 @@ const Navbar = ({items}: {items: NavbarItem[]}): React.JSX.Element => {
                 <div className="flex flex-grow hidden lg:block">
                     <div className="text-sm flex-grow">
                         {items.map((item, index) => (
-                            <a key={index} href={item.link} className="text-xl underline inline-block mt-0 text-black ml-6">
+                            <Link key={index} href={`/${item.link}`} className="text-xl underline inline-block mt-0 text-black ml-6">
                                 {item.text}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>
                 <div>
-                    <div className="text-xl underline sm:block hidden">Kontakt</div>
+                    <Link href="/#kontakt" className="text-xl underline sm:block hidden">Kontakt</Link>
                     <CiMail size="2.5rem" className="sm:hidden" />
                 </div>
             </div>
@@ -53,7 +54,7 @@ const Navbar = ({items}: {items: NavbarItem[]}): React.JSX.Element => {
                 <ul>
                     {items.map((item, index) => (
                         <li key={index}>
-                            <a className="block text-sm text-black underline px-2 py-1">{item.text}</a>
+                            <Link className="block text-sm text-black underline px-2 py-1" href={`/${item.link}`}>{item.text}</Link>
                         </li>
                     ))}
                 </ul>

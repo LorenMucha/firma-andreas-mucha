@@ -11,7 +11,9 @@ const config: Config = {
       'green-100': '#026100',
       'green-200': '#04B700',
       'green-300': '#A4D9A3',
-      'white': 'rgb(255 255 255)'
+      'white': 'rgb(255 255 255)',
+      'grey-100': '#C9C9C9',
+      'grey-200': '#343434'
 
     },
     extend: {
