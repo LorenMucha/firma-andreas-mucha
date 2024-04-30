@@ -1,11 +1,11 @@
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
-import { navbarItems } from "../page"
 import bad from "../../../public/images/bad/bad_intro.svg"
 import dach from "../../../public/images/dach/dach_intro.svg"
 import haustechnik from "../../../public/images/haustechnik/haustechnik_intro.svg"
 import heizung from "../../../public/images/heizung/heizung_intro.svg"
 import Image from "next/image"
+import { navbarItems } from "../constants"
 
 const images = [dach, haustechnik, heizung, bad]
 

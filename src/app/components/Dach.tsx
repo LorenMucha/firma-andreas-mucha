@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { LeistungProps } from "../page";
 import dachrinneBild from "../../../public/images/dach/dachrinne.png"
 import holzBild from "../../../public/images/dach/holz.png"
 import kupferBild from "../../../public/images/dach/kupfer.png"
 import schornsteinBild from "../../../public/images/dach/schornstein.jpg"
+import { LeistungProps } from "../constants";
 
 const Dach = (props: LeistungProps): React.JSX.Element => {
     return (<section id={props.id}>

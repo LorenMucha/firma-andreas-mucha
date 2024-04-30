@@ -1,9 +1,9 @@
-import { LeistungProps } from "../page";
 import Image from "next/image"
 import badewanne from "../../../public/images/bad/badewanne.png"
 import kleinesBad from "../../../public/images/bad/kleinesBad.jpg"
 import waschtisch from "../../../public/images/bad/waschtisch.jpg"
 import kloset from "../../../public/images/bad/kloset.jpg"
+import { LeistungProps } from "../constants"
 
 
 const Bad = (props: LeistungProps): React.JSX.Element =>

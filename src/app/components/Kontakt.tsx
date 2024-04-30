@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { LeistungProps } from "../page";
 import { useForm, ValidationError } from '@formspree/react';
+import { LeistungProps } from "../constants";
 
 const Kontakt = (props: LeistungProps): React.JSX.Element => {
 

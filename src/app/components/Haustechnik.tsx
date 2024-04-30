@@ -1,8 +1,8 @@
-import { LeistungProps } from "../page";
 import anschlussBild from "../../../public/images/haustechnik/anschluss.jpg"
 import gestellBild from "../../../public/images/haustechnik/gestell.jpg"
 import rohrBild from "../../../public/images/haustechnik/rohr.jpg"
 import Image from "next/image";
+import { LeistungProps } from "../constants";
 
 const Haustechnik = (props: LeistungProps): React.JSX.Element =>
     <section id={props.id}>

@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { CiMail } from "react-icons/ci";
-import { NavbarItem } from "../page";
 import Link from "next/link";
-
-
-
+import { NavbarItem } from "../constants";
 
 const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
     const [isOpen, setIsOpen] = useState(false);

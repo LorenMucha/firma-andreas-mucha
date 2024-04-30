@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { NavbarItem } from "../page"
+import { NavbarItem } from "../constants"
 
 const Footer = ({ links }: { links: NavbarItem[] }): React.JSX.Element =>
     <footer className="relative bottom-0">

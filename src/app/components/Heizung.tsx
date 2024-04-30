@@ -1,8 +1,7 @@
 import Image from "next/image"
 import therme from "../../../public/images/heizung/therme.png"
 import fußbodenHeizung from "../../../public/images/heizung/fußbodenheizung.jpg"
-import { LeistungProps } from "../page"
-
+import { LeistungProps } from "../constants"
 
 const Heizung = (props: LeistungProps): React.JSX.Element =>
     <section id={props.id}>
