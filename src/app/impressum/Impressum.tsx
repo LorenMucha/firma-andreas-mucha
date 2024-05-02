@@ -15,13 +15,13 @@ const ImpressumPage = (): React.JSX.Element =>
         <section className="leading-none mt-24">
             <div className="leistung">
                 <div>
-                    <b>Inhaltlich verantwortlicher gem. §6 MDStV &amp; §6 TDG:</b>
+                    <div className="font-bold">Inhaltlich verantwortlicher gem. §6 MDStV §6 TDG:</div>
                     <p>Firma Andreas Mucha</p>
                     <p>Seitenstraße 8<br />
                         01896 Lichtenberg</p>
                     <p>Telefon: 0176/39735624</p>
                     <p>Email: <a className="underline hover:text-green-200" href="mailto:fa.mucha@web.de">fa.mucha@web.de</a></p>
-                    <b>Inhaber und Geschäftsführer:</b>
+                    <div className="mt-3 font-bold">Inhaber und Geschäftsführer:</div>
                     <p>Andreas Mucha</p>
                     <p>Registergericht: Amtsgericht Dresden</p><br />
                     <p>Umsatzsteuer Identifikations-Nr: DE236665763</p>
