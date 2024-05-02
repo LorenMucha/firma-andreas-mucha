@@ -32,7 +32,7 @@ const Kontakt = (props: LeistungProps): React.JSX.Element => {
                 <div className="mt-3">Bei Anfragen nutzen Sie bitte das Kontaktformular oder schreiben uns mir per Email: </div>
                 <form onSubmit={handleSubmit}>
                     <div className="input-row">
-                        <div>Name:</div>
+                        <label>Name:</label>
                         <input id="name" name="name" type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
                         <ValidationError
                             prefix="Name"
@@ -41,7 +41,7 @@ const Kontakt = (props: LeistungProps): React.JSX.Element => {
                         />
                     </div>
                     <div className="input-row">
-                        <div>Email:</div>
+                        <label>Email:</label>
                         <input id="email" type="email" name="email" placeholder="Email" />
                         <ValidationError
                             prefix="Email"
@@ -50,7 +50,7 @@ const Kontakt = (props: LeistungProps): React.JSX.Element => {
                         />
                     </div>
                     <div className="input-row">
-                        <div>Anliegen:</div>
+                        <label>Anliegen:</label>
                         <textarea id="message" name="message" rows={5} placeholder="Ihr Anliegen..." />
                         <ValidationError
                             prefix="Message"

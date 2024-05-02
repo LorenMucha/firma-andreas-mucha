@@ -7,7 +7,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="navbar shadow-lg fixed w-full top-0 z-10 px-3 py-3 bg-white">
+        <nav className="navbar shadow-lg fixed w-screen top-0 z-10 px-3 py-3 bg-white">
             <div className="mx-auto flex flex-grow items-center justify-between">
                 <div className="block lg:hidden">
                     <button
@@ -43,8 +43,8 @@ const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
                     </div>
                 </div>
                 <div>
-                    <Link href="/#kontakt" className="text-xl underline sm:block hidden">Kontakt</Link>
-                    <CiMail size="2.5rem" className="sm:hidden" />
+                    <Link href="#kontakt" className="text-xl underline sm:block hidden">Kontakt</Link>
+                    <Link href="#kontakt" ><CiMail size="2.5rem" className="sm:hidden" /></Link>
                 </div>
             </div>
             <div className={`bg-white relative py-1 ${isOpen ? "block" : "hidden"} z-50`}>

@@ -17,25 +17,19 @@ html {
 }
 
 :root nav>div {
-  @apply lg:px-[100px] px-10 text-[24px] leading-[29px] font-[700];
+  @apply lg:px-24 px-5 text-2xl;
 }
 
 :root section:not(hr) {
-  @apply lg:px-[100px] px-10;
+  @apply lg:px-24 px-5;
 }
 
 :root .leistung {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  @apply p-5 w-full mt-5 leading-normal;
+  @apply p-5 w-full mt-5 leading-normal font-normal text-xl;
 }
 
 :root .leistung .header {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 39px;
+  @apply font-bold text-3xl;
 }
 
 :root .leistung b {
@@ -46,8 +40,8 @@ html {
   @apply inline-flex w-full my-3;
 }
 
-:root #kontakt .input-row div {
-  @apply w-1/6;
+:root #kontakt .input-row label {
+  @apply sm:w-24 w-1/4;
 }
 
 :root #kontakt .input-row input,
@@ -55,11 +49,11 @@ textarea {
   box-sizing: border-box;
   background: #FFFFFF;
   border: 1px solid #676767;
-  @apply w-5/6;
+  @apply sm:w-full sm:ml-0 ml-2 w-3/4;
 }
 
 :root footer {
-  @apply bg-grey-200 text-white lg:px-[100px] px-10;
+  @apply bg-grey-200 text-white px-24 w-full;
 }
 
 :root footer div {
