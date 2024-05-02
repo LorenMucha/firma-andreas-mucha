@@ -32,10 +32,6 @@ html {
   @apply font-bold text-3xl;
 }
 
-:root .leistung b {
-  @apply font-bold;
-}
-
 :root .leistung img {
   @apply object-cover mx-auto h-full;
 }

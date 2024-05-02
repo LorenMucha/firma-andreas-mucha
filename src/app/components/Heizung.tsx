@@ -11,7 +11,7 @@ const Heizung = (props: LeistungProps): React.JSX.Element =>
                 <div className="flex-1 md:w-4/6">
                     Mit unserer langjährigen Erfahrung unterstützen wir Sie bei der Planung und dem Bau kompletter Heizungsanlagen.
                     Unser Angebot umfasst <b>Brennwert-Gas-und Ölanlagen-, sowie Pelletsheizungen</b>.
-                    Wir bieten Lösungen für <b>Wärmepumpen, Photovoltaik- und Solaranlagen</b> sowie an.
+                    Wir bieten Lösungen für <b>Wärmepumpen, Photovoltaik- und Solaranlagen</b> .
                 </div>
                 <div className="md:w-1/6 w-3/4 md:mr-5 md:ml-5 mt-2">
                     <Image alt="image" src={therme} quality="100"/>

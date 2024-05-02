@@ -19,12 +19,12 @@ const ImpressumPage = (): React.JSX.Element =>
                     <p>Firma Andreas Mucha</p>
                     <p>Seitenstraße 8<br />
                         01896 Lichtenberg</p>
-                    <p>Telefon: TODO</p>
-                    <p>Email: <a className="underline hover:text-green-200" href="mailto:fa.mucha@web.de">TODO</a></p>
+                    <p>Telefon: 0176/39735624</p>
+                    <p>Email: <a className="underline hover:text-green-200" href="mailto:fa.mucha@web.de">fa.mucha@web.de</a></p>
                     <b>Inhaber und Geschäftsführer:</b>
                     <p>Andreas Mucha</p>
-                    <p>Registergericht: TODO<br />
-                        Steuer-Nr: TODO</p>
+                    <p>Registergericht: Amtsgericht Dresden</p><br />
+                    <p>Umsatzsteuer Identifikations-Nr: DE236665763</p>
                     <div className="header text-center py-2">Inhalte dieser Website</div>
                     <div>Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt.
                         Der Anbieter übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte.
