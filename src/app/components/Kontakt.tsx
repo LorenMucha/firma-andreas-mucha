@@ -27,7 +27,7 @@ const Kontakt = (props: LeistungProps): React.JSX.Element => {
 
     return (
         <section id={props.id} className="bg-grey-100">
-            <div className="leistung">
+            <div className="leistung mt-2">
                 <div className="header">Kontakt</div>
                 <div className="mt-3">Bei Anfragen nutzen Sie bitte das Kontaktformular oder schreiben uns mir per Email: </div>
                 <form onSubmit={handleSubmit}>

@@ -18,12 +18,12 @@ const Dach = (props: LeistungProps): React.JSX.Element => {
                     um Ihnen eine umfassende Lösung aus einer Hand zu bieten.
                 </div>
                 <div className="md:w-1/6 w-3/4 md:mr-5 md:ml-5 mt-2 mx-auto flex flex-col">
-                    <Image alt="image" src={holzBild} quality="100" width={300} height={150} className="pb-2 md:mx-auto" />
-                    <Image alt="image" src={kupferBild} quality="100" width={300} height={150} className="md:mx-auto" />
+                    <Image alt="image" src={holzBild} quality="100" className="pb-2" />
+                    <Image alt="image" src={kupferBild} quality="100" />
                 </div>
-                <div className="md:w-1/6 w-3/4 mt-2 mx-auto flex flex-col h-[400px]">
-                    <Image alt="image" src={dachrinneBild} quality="100" width={300} className="mx-auto pb-2" />
-                    <Image alt="image" src={schornsteinBild} quality="100" width={300} className="mx-auto" />
+                <div className="md:w-1/6 w-3/4 mt-2 mx-auto flex flex-col">
+                    <Image alt="image" src={dachrinneBild} quality="100" className="pb-2" />
+                    <Image alt="image" src={schornsteinBild} quality="100" />
                 </div>
             </div>
         </div>

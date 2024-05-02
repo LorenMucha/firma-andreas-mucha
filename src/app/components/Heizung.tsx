@@ -13,11 +13,11 @@ const Heizung = (props: LeistungProps): React.JSX.Element =>
                     Unser Angebot umfasst <b>Brennwert-Gas-und Ölanlagen-, sowie Pelletsheizungen</b>.
                     Wir bieten Lösungen für <b>Wärmepumpen, Photovoltaik- und Solaranlagen</b> sowie an.
                 </div>
-                <div className="md:w-1/6 w-3/4 md:ml-5 mt-2 mx-auto">
-                    <Image alt="image" src={therme} quality="100" width={200}/>
+                <div className="md:w-1/6 w-3/4 md:mr-5 md:ml-5 mt-2">
+                    <Image alt="image" src={therme} quality="100"/>
                 </div>
-                <div className="md:w-1/6 w-3/4 mt-2 mx-auto">
-                    <Image alt="image" src={fußbodenHeizung} quality="100" width={200} />
+                <div className="md:w-1/6 w-3/4 mt-2">
+                    <Image alt="image" src={fußbodenHeizung} quality="100" />
 
                 </div>
             </div>

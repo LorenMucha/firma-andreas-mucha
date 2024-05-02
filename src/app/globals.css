@@ -36,6 +36,10 @@ html {
   @apply font-bold;
 }
 
+:root .leistung img {
+  @apply object-cover mx-auto h-full;
+}
+
 :root #kontakt .input-row {
   @apply inline-flex w-full my-3;
 }

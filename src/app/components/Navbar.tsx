@@ -43,8 +43,8 @@ const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
                     </div>
                 </div>
                 <div>
-                    <Link href="#kontakt" className="text-xl underline sm:block hidden">Kontakt</Link>
-                    <Link href="#kontakt" ><CiMail size="2.5rem" className="sm:hidden" /></Link>
+                    <Link href="/#kontakt" className="text-xl underline sm:block hidden">Kontakt</Link>
+                    <Link href="/#kontakt" ><CiMail size="2.5rem" className="sm:hidden" /></Link>
                 </div>
             </div>
             <div className={`bg-white relative py-1 ${isOpen ? "block" : "hidden"} z-50`}>
@@ -54,6 +54,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
                             <Link className="block text-sm text-black underline px-2 py-1" href={`/${item.link}`}>{item.text}</Link>
                         </li>
                     ))}
+                    <li><Link href="/impressum" className="block text-sm text-black underline px-2 py-1">Impressum</Link></li>
                 </ul>
             </div>
         </nav >
