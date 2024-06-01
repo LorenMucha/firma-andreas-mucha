@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Andreas Mucha",
-  description: "Firma Mucha Ihr Partner für Bad | Heizung | Dach+",
+  description: "Firma Mucha ist Ihr Partner in der Region fPulsnitz ür Bad | Heizung | Dach | Haustechnik. Wir beraten Sie gerne.",
 };
 
 export default function RootLayout({
