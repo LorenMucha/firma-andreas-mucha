@@ -4,69 +4,88 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4em;
+  scroll-padding-top: 6rem;
 }
 
-:root body {
-  background: white;
-  @apply !font-serif;
+@layer base {
+  body {
+    @apply bg-sand-50 text-ink-900 font-sans antialiased;
+  }
+
+  h1 {
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply font-display text-3xl sm:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply font-display text-2xl leading-tight;
+  }
+
+  p {
+    @apply text-base sm:text-lg leading-relaxed text-ink-700;
+  }
+
+  a {
+    @apply text-ink-900;
+  }
 }
 
-:root nav {
-  @apply font-bold;
-}
+@layer components {
+  .section-pad {
+    @apply px-6 sm:px-10 lg:px-20;
+  }
 
-:root nav>div {
-  @apply lg:px-24 px-5 text-2xl;
-}
+  .card {
+    @apply rounded-3xl border border-ink-100 bg-white/90 shadow-soft;
+  }
 
-:root section:not(hr) {
-  @apply lg:px-24 px-5;
-}
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/60;
+  }
 
-:root .leistung {
-  @apply p-5 w-full mt-5 leading-normal font-normal text-xl;
-}
+  .tag {
+    @apply inline-flex items-center gap-2 rounded-full border border-ink-100 bg-white/70 px-4 py-2 text-sm uppercase tracking-wide text-ink-700;
+  }
 
-:root .leistung .header {
-  @apply font-bold text-3xl;
-}
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-ink-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-ink-700;
+  }
 
-:root .leistung b {
-  @apply font-normal;
-}
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-ink-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-ink-900 transition hover:-translate-y-0.5 hover:border-copper-500 hover:text-copper-500;
+  }
 
-:root .leistung img {
-  @apply object-cover mx-auto h-full;
-}
-
-:root #kontakt .input-row {
-  @apply inline-flex w-full my-3;
-}
-
-:root #kontakt .input-row label {
-  @apply sm:w-24 w-1/4;
-}
-
-:root #kontakt .input-row input,
-textarea {
-  box-sizing: border-box;
-  background: #FFFFFF;
-  border: 1px solid #676767;
-  @apply sm:w-full sm:ml-0 ml-2 w-3/4;
-}
-
-:root footer {
-  @apply bg-grey-200 text-white px-24 w-full;
-}
-
-:root footer div {
-  font-weight: 400;
-  font-size: 20px;
+  .input {
+    @apply w-full rounded-2xl border border-ink-100 bg-white/95 px-4 py-3 text-base text-ink-900 shadow-sm transition focus:border-copper-400 focus:outline-none focus:ring-2 focus:ring-copper-200;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .grid-lines {
+    background-image: linear-gradient(rgba(17, 27, 43, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 27, 43, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out both;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

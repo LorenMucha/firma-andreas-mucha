@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import de from "@/locales/de.json";
 
-const inter = Inter({ subsets: ["latin"] });
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: de.metadata.title,
@@ -17,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" suppressHydrationWarning={true}>
-      <body className={inter.className}>{children}</body>
+      <body className={`${manrope.variable} ${fraunces.variable}`}>{children}</body>
     </html>
   );
 }

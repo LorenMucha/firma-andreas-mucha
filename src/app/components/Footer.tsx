@@ -1,29 +1,41 @@
-import Link from "next/link"
-import { NavbarItem } from "../constants"
-import de from "@/locales/de.json"
+import Link from "next/link";
+import { NavbarItem } from "../constants";
+import de from "@/locales/de.json";
 
-const Footer = ({ links }: { links: NavbarItem[] }): React.JSX.Element =>
-    <footer className="relative bottom-0 left-0 right-0 md:block hidden">
-        <div className="grid grid-cols-7 grid-flow-col py-5">
-            <div className="sm:col-span-2 col-span-3">
-                <div>{de.site.taglineFooter}</div>
-                {links.map((item, index) => (
-                    <div key={index} className="underline">
-                        <a href={item.link}>{item.text}</a>
-                    </div>
-                ))}
-            </div>
-            <div className="underline sm:col-span-4 col-span-4">
-                <Link href={`/#${de.anchors.kontakt}`}>{de.nav.kontakt}</Link>
-                <div><Link href="/impressum">{de.nav.impressum}</Link></div>
-            </div>
-            <div className="float-right">
-                <div>{de.site.name}</div>
-                <div>{de.footer.address.line1}</div>
-                <div>{de.footer.address.line2}</div>
-            </div>
-
+const Footer = ({ links }: { links: NavbarItem[] }): React.JSX.Element => (
+  <footer className="section-pad border-t border-ink-100 bg-white/80 py-12">
+    <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.8fr]">
+      <div>
+        <div className="text-lg font-semibold text-ink-900">{de.site.name}</div>
+        <p className="mt-3 text-sm text-ink-700">{de.site.taglineFooter}</p>
+      </div>
+      <div>
+        <div className="text-sm font-semibold uppercase tracking-wide text-ink-500">Navigation</div>
+        <div className="mt-4 grid gap-2">
+          {links.map((item) => (
+            <Link key={item.text} href={`/${item.link}`} className="text-sm text-ink-700 hover:text-ink-900">
+              {item.text}
+            </Link>
+          ))}
+          <Link href={`/#${de.anchors.kontakt}`} className="text-sm text-ink-700 hover:text-ink-900">
+            {de.nav.kontakt}
+          </Link>
+          <Link href="/impressum" className="text-sm text-ink-700 hover:text-ink-900">
+            {de.nav.impressum}
+          </Link>
         </div>
-    </footer>
+      </div>
+      <div>
+        <div className="text-sm font-semibold uppercase tracking-wide text-ink-500">Adresse</div>
+        <div className="mt-4 text-sm text-ink-700">
+          <div>{de.footer.address.line1}</div>
+          <div>{de.footer.address.line2}</div>
+        </div>
+        <div className="mt-4 text-sm text-ink-700">{de.impressum.phone}</div>
+        <div className="text-sm text-ink-700">{de.impressum.email}</div>
+      </div>
+    </div>
+  </footer>
+);
 
-export default Footer
+export default Footer;

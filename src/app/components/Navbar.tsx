@@ -1,65 +1,59 @@
+"use client";
 import { useState } from "react";
-import { CiMail } from "react-icons/ci";
 import Link from "next/link";
 import { NavbarItem } from "../constants";
 import de from "@/locales/de.json";
 
 const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <nav className="navbar shadow-lg fixed w-screen top-0 z-10 px-3 py-3 bg-white">
-            <div className="mx-auto flex flex-grow items-center justify-between">
-                <div className="block lg:hidden">
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="flex items-center px-3 py-2 rounded text-black hover:text-black-400"
-                    >
-                        <svg
-                            className={`fill-current h-5 w-5 ${isOpen ? "hidden" : "block"}`}
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                        </svg>
-                        <svg
-                            className={`fill-current h-5 w-5 ${isOpen ? "block" : "hidden"}`}
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-                        </svg>
-                    </button>
-                </div>
-                <div className="lg:px-10 sm:w-1/3">
-                    <span className="text-green-200">{de.site.name}</span>
-                </div>
-                <div className="flex flex-grow hidden lg:block">
-                    <div className="text-sm flex-grow">
-                        {items.map((item, index) => (
-                            <Link key={index} href={`/${item.link}`} className="text-xl underline inline-block mt-0 text-black ml-6">
-                                {item.text}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-                <div>
-                    <Link href={`/#${de.anchors.kontakt}`} className="text-xl underline sm:block hidden">{de.nav.kontakt}</Link>
-                    <Link href={`/#${de.anchors.kontakt}`} ><CiMail size="2.5rem" className="sm:hidden" /></Link>
-                </div>
-            </div>
-            <div className={`bg-white relative py-1 ${isOpen ? "block" : "hidden"} z-50`}>
-                <ul>
-                    {items.map((item, index) => (
-                        <li key={index}>
-                            <Link className="block text-sm text-black underline px-2 py-1" href={`/${item.link}`}>{item.text}</Link>
-                        </li>
-                    ))}
-                    <li><Link href="/impressum" className="block text-sm text-black underline px-2 py-1">{de.nav.impressum}</Link></li>
-                </ul>
-            </div>
-        </nav >
-    )
-}
+  return (
+    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/40 bg-white/80 backdrop-blur-xl">
+      <div className="section-pad flex items-center justify-between py-4">
+        <Link href={`/#${de.anchors.start}`} className="text-lg font-semibold text-ink-900">
+          {de.site.name}
+        </Link>
+        <div className="hidden items-center gap-8 lg:flex">
+          {items.map((item) => (
+            <Link
+              key={item.text}
+              href={`/${item.link}`}
+              className="text-sm font-semibold uppercase tracking-wide text-ink-700 hover:text-ink-900"
+            >
+              {item.text}
+            </Link>
+          ))}
+          <Link href={`/#${de.anchors.kontakt}`} className="btn-primary">
+            {de.nav.kontakt}
+          </Link>
+        </div>
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink-100 text-ink-900 lg:hidden"
+          aria-label="Menü öffnen"
+          aria-expanded={isOpen}
+        >
+          <span className="text-lg">{isOpen ? "×" : "≡"}</span>
+        </button>
+      </div>
+      <div className={`section-pad pb-6 ${isOpen ? "block" : "hidden"} lg:hidden`}>
+        <div className="card flex flex-col gap-4 p-5">
+          {items.map((item) => (
+            <Link key={item.text} href={`/${item.link}`} className="text-sm font-semibold uppercase tracking-wide text-ink-700">
+              {item.text}
+            </Link>
+          ))}
+          <Link href={`/#${de.anchors.kontakt}`} className="btn-primary w-full text-center">
+            {de.nav.kontakt}
+          </Link>
+          <Link href="/impressum" className="text-sm uppercase tracking-wide text-ink-500">
+            {de.nav.impressum}
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
