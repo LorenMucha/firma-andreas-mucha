@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://lorenmucha.github.io/firma-andreas-mucha/sitemap.xml
