@@ -1,7 +1,7 @@
 import de from "@/locales/de.json"
 
 export interface LeistungProps {
-    id: string
+    id?: string
 }
 
 export interface NavbarItem {

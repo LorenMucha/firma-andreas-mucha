@@ -14,7 +14,7 @@ const ServiceImageGrid = ({ images }: ServiceImageGridProps): React.JSX.Element 
       {images.map((image, index) => {
         const spanClass = isThree && index === 0 ? "sm:col-span-2" : "";
         return (
-          <div key={`${image.src}-${index}`} className={`card overflow-hidden ${spanClass}`}>
+          <div key={`${image.src}-${index}`} className={`overflow-hidden rounded-3xl ${spanClass}`}>
             <ImageZoom
               alt={de.media.imageAlt}
               src={image}

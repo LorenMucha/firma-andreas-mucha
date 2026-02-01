@@ -43,10 +43,13 @@ const ImageZoom = ({ src, alt, className, quality = 90, sizes }: ImageZoomProps)
       </button>
       {open ? (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-6 backdrop-blur"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-6 backdrop-blur-xl"
           onClick={() => setOpen(false)}
         >
-          <div className="relative" onClick={(event) => event.stopPropagation()}>
+          <div
+            className="relative flex h-[80vh] w-[90vw] items-center justify-center"
+            onClick={(event) => event.stopPropagation()}
+          >
             <button
               type="button"
               onClick={() => setOpen(false)}
@@ -60,7 +63,7 @@ const ImageZoom = ({ src, alt, className, quality = 90, sizes }: ImageZoomProps)
               src={src}
               quality={quality}
               sizes="90vw"
-              className="max-h-[80vh] w-auto max-w-[90vw] rounded-2xl object-contain"
+              className="max-h-full max-w-full rounded-2xl object-contain"
             />
           </div>
         </div>

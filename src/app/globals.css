@@ -31,6 +31,7 @@ html {
   a {
     @apply text-ink-900;
   }
+
 }
 
 @layer components {
