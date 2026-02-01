@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import de from "@/locales/de.json";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Andreas Mucha",
-  description: "Firma Mucha ist Ihr Partner in der Region fPulsnitz ür Bad | Heizung | Dach | Haustechnik. Wir beraten Sie gerne.",
+  title: de.metadata.title,
+  description: de.metadata.description,
 };
 
 export default function RootLayout({

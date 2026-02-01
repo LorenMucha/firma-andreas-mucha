@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CiMail } from "react-icons/ci";
 import Link from "next/link";
 import { NavbarItem } from "../constants";
+import de from "@/locales/de.json";
 
 const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
                     </button>
                 </div>
                 <div className="lg:px-10 sm:w-1/3">
-                    <span className="text-green-200">Andreas Mucha</span>
+                    <span className="text-green-200">{de.site.name}</span>
                 </div>
                 <div className="flex flex-grow hidden lg:block">
                     <div className="text-sm flex-grow">
@@ -43,8 +44,8 @@ const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
                     </div>
                 </div>
                 <div>
-                    <Link href="/#kontakt" className="text-xl underline sm:block hidden">Kontakt</Link>
-                    <Link href="/#kontakt" ><CiMail size="2.5rem" className="sm:hidden" /></Link>
+                    <Link href={`/#${de.anchors.kontakt}`} className="text-xl underline sm:block hidden">{de.nav.kontakt}</Link>
+                    <Link href={`/#${de.anchors.kontakt}`} ><CiMail size="2.5rem" className="sm:hidden" /></Link>
                 </div>
             </div>
             <div className={`bg-white relative py-1 ${isOpen ? "block" : "hidden"} z-50`}>
@@ -54,7 +55,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
                             <Link className="block text-sm text-black underline px-2 py-1" href={`/${item.link}`}>{item.text}</Link>
                         </li>
                     ))}
-                    <li><Link href="/impressum" className="block text-sm text-black underline px-2 py-1">Impressum</Link></li>
+                    <li><Link href="/impressum" className="block text-sm text-black underline px-2 py-1">{de.nav.impressum}</Link></li>
                 </ul>
             </div>
         </nav >
