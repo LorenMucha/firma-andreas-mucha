@@ -52,9 +52,15 @@ const Gallery = (): React.JSX.Element => {
     }
 
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") close();
-      if (event.key === "ArrowRight") showNext();
-      if (event.key === "ArrowLeft") showPrev();
+      if (event.key === "Escape") {
+        setActiveIndex(null);
+      }
+      if (event.key === "ArrowRight") {
+        setActiveIndex((current) => (current === null ? null : (current + 1) % totalImages));
+      }
+      if (event.key === "ArrowLeft") {
+        setActiveIndex((current) => (current === null ? null : (current - 1 + totalImages) % totalImages));
+      }
     };
 
     document.body.style.overflow = "hidden";
@@ -63,7 +69,7 @@ const Gallery = (): React.JSX.Element => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKey);
     };
-  }, [activeIndex]);
+  }, [activeIndex, totalImages]);
 
   return (
     <section id={de.anchors.projekte} className="section-pad py-16 sm:py-20">

@@ -3,7 +3,7 @@ import ImpressumPage from "./Impressum";
 import de from "@/locales/de.json";
 
 export const metadata: Metadata = {
-  title: `Impressum | ${de.metadata.title}`,
+  title: "Impressum",
   description: `${de.impressum.company} – Impressum und rechtliche Angaben.`,
 };
 

@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "title": "Andreas Mucha",
-    "description": "Sanitär, Heizung, Dach und Haustechnik in der Region Lichtenberg. Beratung, Planung und Montage aus einer Hand."
+    "title": "Firma Andreas Mucha",
+    "description": "Sanitär, Heizung, Dach und Haustechnik in Lichtenberg und Umgebung. Beratung, Modernisierung, Montage und direkte Anfrage per Telefon, E-Mail oder Formular."
   },
   "site": {
-    "name": "Andreas Mucha",
-    "tagline": "Saubere Lösungen für Bad, Heizung, Dach und Haustechnik",
-    "taglineFooter": "Sanitär | Heizung | Dach | Haustechnik"
+    "name": "Firma Andreas Mucha",
+    "tagline": "Sanitär, Heizung, Dach & Haustechnik in Lichtenberg",
+    "taglineFooter": "Sanitär, Heizung, Dach und Haustechnik in 01896 Lichtenberg"
   },
   "media": {
-    "imageAlt": "Projektbild"
+    "imageAlt": "Projektbild der Firma Andreas Mucha"
   },
   "anchors": {
     "start": "start",
@@ -25,134 +25,159 @@
   "nav": {
     "items": [
       { "text": "Leistungen", "link": "#leistungen" },
+      { "text": "Projekte", "link": "#projekte" },
       { "text": "Ablauf", "link": "#ablauf" },
-      { "text": "Projekte", "link": "#projekte" }
+      { "text": "Kontakt", "link": "#kontakt" }
     ],
-    "kontakt": "Kontakt",
+    "kontakt": "Anfrage",
     "impressum": "Impressum"
   },
   "sections": {
     "hero": {
-      "title": "Ihr Zuhause. Unsere Verantwortung. Saubere Technik, die bleibt.",
-      "subtitle": "Ob Badmodernisierung, neue Heiztechnik oder Dacharbeiten: Wir planen klar, arbeiten sauber und liefern messbare Qualität. Sie erhalten feste Ansprechpartner, realistische Zeitpläne und ein Ergebnis, das langfristig überzeugt.",
-      "primaryCta": "Projekt besprechen",
+      "title": "Sanitär, Heizung, Dach und Haustechnik in Lichtenberg",
+      "subtitle": "Für Eigentümer, Bauherren und Modernisierungsprojekte in Lichtenberg und Umgebung. Auf dieser Seite finden Sie die Leistungsbereiche der Firma Andreas Mucha, vorhandene Projektbilder und den direkten Weg zur Anfrage.",
+      "primaryCta": "Jetzt anfragen",
       "secondaryCta": "Leistungen ansehen",
-      "badges": ["Fixer Ansprechpartner", "Saubere Baustelle", "Planung & Montage"]
+      "badges": [
+        "Standort in Lichtenberg",
+        "Projektbilder aus echten Arbeiten",
+        "Telefon, E-Mail und Formular direkt erreichbar"
+      ]
     },
     "vorteile": {
-      "title": "Darum entscheiden sich Kunden für uns",
-      "subtitle": "Wir kombinieren Handwerksqualität mit moderner Planung – damit Sie genau wissen, was Sie bekommen.",
+      "title": "Schneller orientiert, schneller angefragt",
+      "subtitle": "Die Seite ist so aufgebaut, dass Leistungen, Bildbeispiele und Kontaktwege sofort erreichbar sind.",
       "items": [
         {
-          "title": "Transparente Angebote",
-          "body": "Klare Leistungsbeschreibungen, nachvollziehbare Kosten und keine Überraschungen."
+          "title": "Leistungen klar gegliedert",
+          "body": "Sanitär, Heizung, Dach und Haustechnik sind getrennt beschrieben, damit Sie direkt zum passenden Thema springen können."
         },
         {
-          "title": "Ein Team für alles",
-          "body": "Von der Beratung bis zur Übergabe – wir koordinieren alles und bleiben Ihr Ansprechpartner."
+          "title": "Vorhandene Arbeiten sichtbar",
+          "body": "Die Bildbereiche zeigen bestehende Projektfotos statt austauschbarer Stockmotive."
         },
         {
-          "title": "Sauber umgesetzt",
-          "body": "Wir schützen Ihr Zuhause, arbeiten ordentlich und übergeben zuverlässig geprüft."
+          "title": "Kontakt ohne Umwege",
+          "body": "Telefon, E-Mail, Anschrift und Formular sind auf der Startseite jederzeit verfügbar."
         }
       ]
     },
     "leistungen": {
-      "title": "Leistungen für nachhaltigen Wohnkomfort",
-      "subtitle": "Modernisierung mit System: Wir kombinieren effiziente Technik, durchdachte Planung und saubere Umsetzung."
+      "title": "Leistungen rund ums Haus",
+      "subtitle": "Für Modernisierung, Einbau und ausgewählte Arbeiten in den Bereichen Bad, Heizung, Dach und Haustechnik."
     },
     "heizung": {
-      "title": "Heizung & Energie",
-      "intro": "Effiziente Heizsysteme, die zu Ihrem Gebäude, Budget und Komfortanspruch passen. Wir beraten technologieoffen und finden die Lösung, die langfristig funktioniert.",
+      "title": "Heizung",
+      "intro": "Arbeiten an Heizungsanlagen und Wärmeverteilung im Bestand sowie in Modernisierungsprojekten.",
       "bullets": [
-        "Brennwert-, Pellet- und Wärmepumpenlösungen",
-        "Hydraulischer Abgleich und Systemoptimierung",
-        "Wartung, Reparatur und Modernisierung",
-        "Einbindung von Solarthermie oder Photovoltaik möglich",
-        "Sanierung im Bestand und Neubau aus einer Hand"
+        "Heizungsmodernisierung und Austausch",
+        "Heizkörper, Leitungen und Verteilung im Gebäude",
+        "Fußbodenheizung und Wärmeverteilung",
+        "Instandsetzung bestehender Heiztechnik"
       ],
-      "detail": "Wir vergleichen Technik, rechnen Wirtschaftlichkeit und setzen die Anlage fachgerecht um. Dabei achten wir auf Energieeffizienz, Langlebigkeit und einen ruhigen, störungsarmen Betrieb. Auf Wunsch übernehmen wir auch die regelmäßige Wartung, damit Ihre Anlage dauerhaft sicher läuft.",
-      "cta": "Heizungsberatung sichern"
+      "detail": "Ob einzelne Komponenten, Verteilung oder die Vorbereitung einer größeren Modernisierung: Der Bereich Heizung ist klar dargestellt und direkt mit passenden Projektbildern verbunden.",
+      "cta": "Heizungsanfrage senden"
     },
     "bad": {
-      "title": "Badgestaltung",
-      "intro": "Individuell geplant, sauber umgesetzt – vom Gäste-WC bis zum Wellnessbad. Wir verbinden Design, Funktion und Alltagstauglichkeit zu einem stimmigen Gesamtergebnis.",
+      "title": "Bad & Sanitär",
+      "intro": "Sanitäre Arbeiten vom einzelnen Ausstattungsbereich bis zum Badumbau mit Blick auf Funktion, Leitungen und Oberflächen.",
       "bullets": [
-        "Planung, Materialberatung und Designkonzept",
-        "Barrierearme Lösungen und komfortable Details",
-        "Komplettumbau mit Koordination aller Gewerke",
-        "Wasser- und Energieeffizienz durch moderne Technik",
-        "Terminsicherheit durch klare Bauabläufe"
+        "Sanitärobjekte, Armaturen und Leitungen",
+        "Badumbau im Bestand",
+        "Waschtische, Duschen und Badewannen",
+        "Technik und Oberfläche sauber abgestimmt"
       ],
-      "detail": "Sie erhalten ein Bad, das alltagstauglich, pflegeleicht und zeitlos schön ist. Wir achten auf gute Beleuchtung, hochwertige Oberflächen und eine klare Linienführung – passend zu Ihrem Stil und Budget.",
-      "cta": "Badprojekt starten"
+      "detail": "Der Badbereich bündelt die typischen Themen im Sanitärbereich und zeigt anhand vorhandener Fotos, wie unterschiedliche Raumlösungen umgesetzt wurden.",
+      "cta": "Badanfrage senden"
     },
     "haustechnik": {
-      "title": "Haustechnik & Installation",
-      "intro": "Zuverlässige Leitungen, sauberes Wasser, stabile Systeme – langlebig umgesetzt. Wir schaffen die technische Basis, auf die Sie sich im Alltag verlassen können.",
+      "title": "Haustechnik",
+      "intro": "Wasser-, Anschluss- und Installationstechnik im Haus, vom Leitungsweg bis zu sichtbaren Technikkomponenten.",
       "bullets": [
-        "Trinkwasser-, Abwasser- und Gasinstallationen",
-        "Leckageschutz, Entkalkung und Filtertechnik",
-        "Rückstauschutz, Hebeanlagen und Wartung",
-        "Austausch und Instandsetzung bestehender Leitungen",
-        "Sichere Ausführung nach aktuellen Standards"
+        "Wasser- und Abwasserinstallationen",
+        "Anschluss- und Filtertechnik",
+        "Leitungsarbeiten im Haus",
+        "Technische Nachrüstung im Bestand"
       ],
-      "detail": "Wir schaffen Technik, die sicher funktioniert – heute und in Zukunft. Dabei achten wir auf saubere Verlegung, gute Zugänglichkeit für Wartung und eine Dokumentation, die Ihnen langfristig hilft.",
-      "cta": "Technik prüfen lassen"
+      "detail": "Der Bereich Haustechnik zeigt Installationen, Leitungsführung und Komponenten, die im Alltag zuverlässig und wartungsfreundlich eingebunden werden müssen.",
+      "cta": "Haustechnikanfrage senden"
     },
     "dach": {
       "title": "Dach & Entwässerung",
-      "intro": "Dacharbeiten mit Präzision – Schutz, der Jahrzehnte hält. Wir sichern Ihr Gebäude gegen Wind, Wetter und Feuchtigkeit.",
+      "intro": "Dacharbeiten, Entwässerung und Metallanschlüsse rund um Gebäudehülle, Übergänge und Außenbereiche.",
       "bullets": [
-        "Eindeckungen und Metallarbeiten aus Zink, Kupfer & Aluminium",
-        "Dachrinnen, Entwässerung und Begleitheizung",
-        "Reparaturen, Wartung und Klein-Gerüstbau",
-        "Schnelle Hilfe bei Sturmschäden oder Undichtigkeiten",
-        "Optische Aufwertung durch saubere Metallabschlüsse"
+        "Dachentwässerung und Dachrinnen",
+        "Metallanschlüsse und Blecharbeiten",
+        "Dacharbeiten an Anbauten und Übergängen",
+        "Instandsetzung einzelner Bereiche"
       ],
-      "detail": "Wir beheben Schäden schnell und sichern Ihr Dach nachhaltig ab. Besonders wichtig: eine funktionsfähige Entwässerung und saubere Übergänge, damit Feuchtigkeit langfristig keine Chance hat.",
-      "cta": "Dachcheck anfragen"
+      "detail": "Der Dachbereich macht sichtbar, wie Dachflächen, Anschlüsse und metallische Details im Bestand umgesetzt wurden.",
+      "cta": "Dachanfrage senden"
     },
     "ablauf": {
-      "title": "So sichern wir Ihr Ergebnis",
+      "title": "So läuft eine Anfrage ab",
       "steps": [
         {
-          "title": "1. Bedarf klären",
-          "body": "Wir hören zu, prüfen die Situation vor Ort und definieren Ziele und Budget."
+          "title": "1. Vorhaben beschreiben",
+          "body": "Per Telefon, E-Mail oder Formular schildern Sie kurz, worum es geht und wo das Projekt liegt."
         },
         {
-          "title": "2. Lösung planen",
-          "body": "Wir erstellen Konzept, Ablauf und Materialien – transparent und verständlich."
+          "title": "2. Unterlagen oder Termin klären",
+          "body": "Wenn sinnvoll, werden Bilder, Maße oder ein Termin zur Einschätzung abgestimmt."
         },
         {
-          "title": "3. Sauber umsetzen",
-          "body": "Unser Team arbeitet termintreu, koordiniert und mit hochwertigem Finish."
+          "title": "3. Leistung abstimmen",
+          "body": "Umfang, passende Gewerke und die nächsten Schritte werden nachvollziehbar besprochen."
         },
         {
-          "title": "4. Ergebnis übergeben",
-          "body": "Gemeinsame Abnahme, Funktionstest und klare Einweisung in die Technik."
+          "title": "4. Umsetzung vorbereiten",
+          "body": "Nach der Abstimmung kann die Ausführung organisiert und terminiert werden."
         }
       ]
     },
     "projekte": {
-      "title": "Einblicke aus der Praxis",
-      "subtitle": "Ausgewählte Arbeiten aus Bad, Heizung, Dach und Haustechnik."
+      "title": "Projektbilder aus bestehenden Arbeiten",
+      "subtitle": "Ausgewählte Referenzfotos aus Bad, Heizung, Dach und Haustechnik."
+    },
+    "region": {
+      "title": "Vor Ort in Lichtenberg",
+      "body": "Der Standort in 01896 Lichtenberg hält den Weg zur Anfrage kurz. Sie finden Anschrift, Telefon, E-Mail und eine direkte Kartenverlinkung ohne zusätzliche Unterseiten.",
+      "addressCta": "Adresse ansehen",
+      "routeCta": "Route mit OpenStreetMap",
+      "phoneCta": "Anrufen",
+      "emailCta": "E-Mail schreiben"
     },
     "kontakt": {
-      "title": "Projekt anfragen",
-      "successTitle": "Vielen Dank für Ihre Anfrage!",
-      "successBody": "Wir melden uns zeitnah mit einem Vorschlag für die nächsten Schritte.",
-      "prompt": "Beschreiben Sie kurz Ihr Vorhaben – wir melden uns schnell zurück. Oder direkt per ",
-      "emailLabel": "E-Mail:",
-      "phoneLabel": "Telefon:",
+      "title": "Kontakt aufnehmen",
+      "successTitle": "Vielen Dank für Ihre Anfrage.",
+      "successBody": "Die Nachricht wurde übertragen. Die weiteren Schritte können nun direkt abgestimmt werden.",
+      "prompt": "Beschreiben Sie Ihr Vorhaben möglichst konkret. Alternativ erreichen Sie die Firma Andreas Mucha direkt per Telefon oder E-Mail.",
+      "emailLabel": "E-Mail",
+      "phoneLabel": "Telefon",
+      "addressLabel": "Anschrift",
+      "routeLabel": "Karte",
+      "responseHint": "Hilfreich sind Projektort, gewünschter Bereich und ein kurzer Hinweis zum aktuellen Stand.",
       "form": {
-        "nameLabel": "Name",
-        "emailLabel": "E-Mail",
-        "messageLabel": "Ihr Vorhaben",
+        "nameLabel": "Name *",
+        "emailLabel": "E-Mail *",
+        "phoneLabel": "Telefon",
+        "locationLabel": "Ort des Projekts",
+        "serviceLabel": "Bereich",
+        "messageLabel": "Ihr Vorhaben *",
         "namePlaceholder": "Ihr Name",
-        "emailPlaceholder": "Ihre E-Mail-Adresse",
-        "messagePlaceholder": "Worum geht es? Raumgröße, gewünschter Zeitraum, besondere Wünsche...",
-        "submit": "Anfrage senden"
+        "emailPlaceholder": "name@beispiel.de",
+        "phonePlaceholder": "Optional für Rückfragen",
+        "locationPlaceholder": "Zum Beispiel Lichtenberg oder Umgebung",
+        "messagePlaceholder": "Worum geht es, was ist bereits vorhanden und wobei wird Unterstützung benötigt?",
+        "submit": "Anfrage senden",
+        "services": [
+          "Bitte wählen",
+          "Bad & Sanitär",
+          "Heizung",
+          "Haustechnik",
+          "Dach & Entwässerung",
+          "Mehrere Bereiche"
+        ]
       },
       "validation": {
         "name": "Name",
@@ -176,7 +201,7 @@
       "line2": "01896 Lichtenberg"
     },
     "phoneLabel": "Telefon",
-    "phone": "0176/39735624",
+    "phone": "0176 / 39735624",
     "emailLabel": "E-Mail",
     "email": "fa.mucha@web.de",
     "ownerTitle": "Inhaber und Geschäftsführer:",

@@ -2,22 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light;
+  --font-sans: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+}
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 7rem;
 }
 
 @layer base {
+  * {
+    @apply border-ink-100;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-copper-400 ring-offset-2 ring-offset-sand-50;
+  }
+
   body {
-    @apply bg-sand-50 text-ink-900 font-sans antialiased;
+    @apply bg-sand-50 font-sans text-ink-900 antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(198, 124, 78, 0.16), transparent 28rem),
+      radial-gradient(circle at top right, rgba(94, 126, 111, 0.12), transparent 24rem),
+      linear-gradient(180deg, #fcfaf7 0%, #f7f3ee 100%);
   }
 
   h1 {
-    @apply font-display text-4xl sm:text-5xl lg:text-6xl leading-tight;
+    @apply font-display text-4xl leading-tight sm:text-5xl lg:text-6xl;
   }
 
   h2 {
-    @apply font-display text-3xl sm:text-4xl leading-tight;
+    @apply font-display text-3xl leading-tight sm:text-4xl;
   }
 
   h3 {
@@ -25,42 +43,70 @@ html {
   }
 
   p {
-    @apply text-base sm:text-lg leading-relaxed text-ink-700;
+    @apply text-base leading-relaxed text-ink-700 sm:text-lg;
   }
 
   a {
-    @apply text-ink-900;
+    @apply text-ink-900 underline-offset-4;
   }
 
+  ::selection {
+    @apply bg-copper-200 text-ink-900;
+  }
 }
 
 @layer components {
+  .skip-link {
+    @apply absolute left-4 top-4 z-[100] rounded-full bg-ink-900 px-4 py-2 text-sm font-semibold text-white;
+    transform: translateY(-200%);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
   .section-pad {
-    @apply px-6 sm:px-10 lg:px-20;
+    @apply px-5 sm:px-8 lg:px-16 xl:px-24;
+  }
+
+  .section-frame {
+    @apply mx-auto w-full max-w-7xl;
+  }
+
+  .surface-card {
+    @apply rounded-[2rem] border border-white/60 bg-white/90 shadow-soft backdrop-blur;
   }
 
   .card {
-    @apply rounded-3xl border border-ink-100 bg-white/90 shadow-soft;
+    @apply rounded-[2rem] border border-white/60 bg-white/90 shadow-soft backdrop-blur;
   }
 
-  .glass {
-    @apply bg-white/80 backdrop-blur-xl border border-white/60;
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-ink-100 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-ink-700;
   }
 
   .tag {
-    @apply inline-flex items-center gap-2 rounded-full border border-ink-100 bg-white/70 px-4 py-2 text-sm uppercase tracking-wide text-ink-700;
+    @apply inline-flex items-center gap-2 rounded-full border border-ink-100 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-ink-700;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-ink-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-ink-700;
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-ink-900 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white no-underline transition duration-200 hover:-translate-y-0.5 hover:bg-ink-700;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full border border-ink-900 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-ink-900 transition hover:-translate-y-0.5 hover:border-copper-500 hover:text-copper-500;
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-ink-900 bg-white/70 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ink-900 no-underline transition duration-200 hover:-translate-y-0.5 hover:border-copper-500 hover:text-copper-500;
   }
 
   .input {
-    @apply w-full rounded-2xl border border-ink-100 bg-white/95 px-4 py-3 text-base text-ink-900 shadow-sm transition focus:border-copper-400 focus:outline-none focus:ring-2 focus:ring-copper-200;
+    @apply w-full rounded-2xl border border-ink-100 bg-white px-4 py-3 text-base text-ink-900 shadow-sm transition placeholder:text-ink-500 focus:border-copper-400;
+  }
+
+  .input-help {
+    @apply mt-2 text-sm text-ink-500;
+  }
+
+  .stat-chip {
+    @apply rounded-2xl border border-white/70 bg-white/75 px-4 py-3 shadow-sm backdrop-blur;
   }
 }
 
@@ -69,14 +115,26 @@ html {
     text-wrap: balance;
   }
 
+  .bg-grid-soft {
+    background-image:
+      linear-gradient(rgba(17, 27, 43, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 27, 43, 0.05) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+
   .grid-lines {
-    background-image: linear-gradient(rgba(17, 27, 43, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(17, 27, 43, 0.08) 1px, transparent 1px);
-    background-size: 32px 32px;
+    background-image:
+      linear-gradient(rgba(17, 27, 43, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 27, 43, 0.05) 1px, transparent 1px);
+    background-size: 34px 34px;
   }
 
   .animate-fade-up {
     animation: fade-up 0.8s ease-out both;
+  }
+
+  .animate-float {
+    animation: float 7s ease-in-out infinite;
   }
 
   @keyframes fade-up {
@@ -88,5 +146,26 @@ html {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up,
+  .animate-float {
+    animation: none;
   }
 }
