@@ -133,7 +133,7 @@ export default function Home() {
     <>
       <Navbar items={navbarItems} />
       <main id="hauptinhalt" className="pb-24 md:pb-0">
-        <section id={de.anchors.start} className="section-pad relative overflow-hidden pt-10 sm:pt-14 lg:pt-16">
+        <section id={de.anchors.start} className="screen-section section-pad relative overflow-hidden py-10 sm:py-14 lg:py-16">
           <div className="absolute inset-0 bg-grid-soft opacity-50" aria-hidden="true" />
           <div className="section-frame relative">
             <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
@@ -242,19 +242,19 @@ export default function Home() {
               <p className="max-w-2xl">{de.sections.leistungen.subtitle}</p>
             </div>
 
-            <div className="mt-8 grid gap-5 lg:grid-cols-2">
+            <div className="mt-8 grid gap-8">
               {services.map((service) => {
                 const Icon = service.icon;
 
                 return (
-                  <article key={service.id} id={service.id} className="surface-card overflow-hidden">
-                    <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+                  <article key={service.id} id={service.id} className="screen-section surface-card overflow-hidden">
+                    <div className="grid w-full gap-8 p-5 sm:p-8 lg:p-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
                       <div className="overflow-hidden rounded-[1.6rem] bg-sand-100">
                         <Image
                           src={service.image}
                           alt={service.alt}
-                          sizes="(max-width: 1024px) 100vw, 24vw"
-                          className="h-64 w-full object-cover"
+                          sizes="(max-width: 1024px) 100vw, 45vw"
+                          className="h-64 w-full object-cover lg:h-[60svh]"
                         />
                       </div>
 

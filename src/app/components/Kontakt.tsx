@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { HiMiniMapPin, HiMiniPhone, HiOutlineEnvelope, HiOutlineMap } from "react-icons/hi2";
@@ -198,7 +199,7 @@ const Kontakt = (props: LeistungProps): React.JSX.Element => {
             </div>
 
             <p id="kontakt-hinweis" className="input-help">
-              Pflichtfelder sind mit einem Stern markiert.
+              Pflichtfelder sind mit einem Stern markiert. Der Versand erfolgt über Formspree. <Link href="/datenschutz" className="underline">Hinweise zum Datenschutz</Link>.
             </p>
 
             <button type="submit" className="btn-primary mt-6 w-full" disabled={state.submitting}>

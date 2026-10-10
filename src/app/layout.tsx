@@ -15,10 +15,10 @@ export const metadata: Metadata = {
   creator: de.impressum.ownerName,
   publisher: de.impressum.company,
   alternates: {
-    canonical: "/",
+    canonical: siteConfig.siteUrl + "/",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: siteConfig.siteUrl + "/favicon.ico",
   },
   openGraph: {
     title: de.metadata.title,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/dach/kupfer.png",
+        url: siteConfig.siteUrl + "/images/dach/kupfer.png",
       },
     ],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: de.metadata.title,
     description: de.metadata.description,
-    images: ["/images/dach/kupfer.png"],
+    images: [siteConfig.siteUrl + "/images/dach/kupfer.png"],
   },
   robots: {
     index: true,
@@ -111,7 +111,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="de" suppressHydrationWarning={true}>
+    <html lang="de">
       <body>
         <a href="#hauptinhalt" className="skip-link">
           Zum Inhalt springen

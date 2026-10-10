@@ -24,10 +24,22 @@
   },
   "nav": {
     "items": [
-      { "text": "Leistungen", "link": "#leistungen" },
-      { "text": "Projekte", "link": "#projekte" },
-      { "text": "Ablauf", "link": "#ablauf" },
-      { "text": "Kontakt", "link": "#kontakt" }
+      {
+        "text": "Leistungen",
+        "link": "#leistungen"
+      },
+      {
+        "text": "Projekte",
+        "link": "#projekte"
+      },
+      {
+        "text": "Ablauf",
+        "link": "#ablauf"
+      },
+      {
+        "text": "Kontakt",
+        "link": "#kontakt"
+      }
     ],
     "kontakt": "Anfrage",
     "impressum": "Impressum"
@@ -36,7 +48,7 @@
     "hero": {
       "title": "Sanitär, Heizung, Dach und Haustechnik in Lichtenberg",
       "subtitle": "Für Eigentümer, Bauherren und Modernisierungsprojekte in Lichtenberg und Umgebung. Auf dieser Seite finden Sie die Leistungsbereiche der Firma Andreas Mucha, vorhandene Projektbilder und den direkten Weg zur Anfrage.",
-      "primaryCta": "Jetzt anfragen",
+      "primaryCta": "Kontakt aufnehmen",
       "secondaryCta": "Leistungen ansehen",
       "badges": [
         "Standort in Lichtenberg",
@@ -73,7 +85,8 @@
         "Heizungsmodernisierung und Austausch",
         "Heizkörper, Leitungen und Verteilung im Gebäude",
         "Fußbodenheizung und Wärmeverteilung",
-        "Instandsetzung bestehender Heiztechnik"
+        "Instandsetzung bestehender Heiztechnik",
+        "Kesselwartung auf Anfrage"
       ],
       "detail": "Ob einzelne Komponenten, Verteilung oder die Vorbereitung einer größeren Modernisierung: Der Bereich Heizung ist klar dargestellt und direkt mit passenden Projektbildern verbunden.",
       "cta": "Heizungsanfrage senden"
@@ -174,6 +187,7 @@
           "Bitte wählen",
           "Bad & Sanitär",
           "Heizung",
+          "Kesselwartung",
           "Haustechnik",
           "Dach & Entwässerung",
           "Mehrere Bereiche"

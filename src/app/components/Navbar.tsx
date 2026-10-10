@@ -76,7 +76,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
 
           <button
             type="button"
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-ink-100 bg-white/80 text-ink-900 xl:hidden"
+            className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-ink-100 bg-white/80 text-ink-900 xl:hidden"
             aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
@@ -88,6 +88,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }): React.JSX.Element => {
 
         <div
           id="mobile-navigation"
+          hidden={!isOpen}
           className={`overflow-hidden transition-[max-height,opacity] duration-300 xl:hidden ${
             isOpen ? "max-h-[32rem] pb-4 opacity-100" : "max-h-0 opacity-0"
           }`}

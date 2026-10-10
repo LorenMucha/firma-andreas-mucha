@@ -34,6 +34,7 @@ const Footer = ({ links }: { links: NavbarItem[] }): React.JSX.Element => (
             {de.nav.impressum}
           </Link>
         </div>
+          <Link href="/datenschutz" className="text-sm font-semibold text-ink-700 no-underline">Datenschutz</Link>
       </div>
 
       <div>
