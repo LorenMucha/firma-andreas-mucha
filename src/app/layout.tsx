@@ -1,22 +1,45 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { siteUrl } from "./constants";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Andreas Mucha",
-  description: "Firma Mucha ist Ihr Partner in der Region fPulsnitz ür Bad | Heizung | Dach | Haustechnik. Wir beraten Sie gerne.",
+  metadataBase: new URL(siteUrl + "/"),
+  title: {
+    default: "Firma Andreas Mucha | Handwerk in Lichtenberg",
+    template: "%s | Firma Andreas Mucha",
+  },
+  description:
+    "Heizung, Bad und Sanitär, Haustechnik, Dacharbeiten und Kesselwartung: Firma Andreas Mucha aus Lichtenberg. Nehmen Sie persönlich Kontakt auf.",
+  alternates: { canonical: siteUrl + "/" },
+  openGraph: {
+    title: "Firma Andreas Mucha – Handwerk aus Lichtenberg",
+    description:
+      "Heizung, Bad, Haustechnik, Dach und Kesselwartung. Persönlicher Kontakt für Ihr Vorhaben.",
+    url: siteUrl + "/",
+    locale: "de_DE",
+    type: "website",
+    images: [
+      {
+        url: siteUrl + "/images/optimized/bad-960.webp",
+        width: 960,
+        height: 720,
+        alt: "Badprojekt der Firma Andreas Mucha",
+      },
+    ],
+  },
 };
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="de" suppressHydrationWarning={true}>
-      <body className={inter.className}>{children}</body>
+    <html lang="de">
+      <body>
+        <a className="skip-link" href="#hauptinhalt">
+          Zum Hauptinhalt springen
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

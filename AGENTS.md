@@ -5,6 +5,18 @@ Diese Regeln gelten für das gesamte Repository. Entwickle die bestehende Websit
 
 Bewahre fachliche Inhalte, reale Firmenidentität und vorhandene funktionierende Abläufe. Arbeite in kleinen, nachvollziehbaren Änderungen; ein Redesign ist kein Auftrag für einen vollständigen Technologiewechsel. Prüfe vor Änderungen den aktuellen Repositoryzustand und gegebenenfalls ergänzende AGENTS.md-Dateien.
 
+## GitHub
+Nutze für alle Interaktionen mit GitHub immer die GitHub CLI (`gh`), beispielsweise für Pull Requests, Issues, Actions, Releases und API-Abfragen (`gh api`).
+
+## Bestätigte Betriebsangaben und Gestaltungsprinzip
+- Andreas Mucha und ein Angestellter bilden den Betrieb. Stelle die persönliche Betriebsgröße ehrlich dar.
+- Kesselwartung gehört ausdrücklich zum Angebot. Kesseltypen, Marken, Intervalle und konkrete Wartungsarbeiten sind nicht bestätigt; keine pauschalen Zusagen ergänzen. Hersteller und Modell können im Anliegen angegeben werden.
+- Einfachheit ist das wichtigste Gestaltungsprinzip: kompakte Startseite, wenige Navigationseinträge, kurze eigenständige Texte und sparsame Bilder.
+- Primäre Aktion „Kontakt aufnehmen“, für Kesselwartung „Wartung anfragen“; beide führen zum vorhandenen Kontaktformular.
+
+## Hosting und Deployment
+Die Website ist unter https://lorenmucha.github.io/firma-andreas-mucha/ erreichbar und wird über GitHub Pages deployed. Berücksichtige den Projektpfad `/firma-andreas-mucha/` bei internen Links, Asset-Pfaden und der Prüfung des statischen Exports.
+
 ## Verifizierte Ausgangslage
 Analyse vom 10.10.2026, Repository `main` bei Commit `3d887f97a75a7a26af48854acbc8105916d76bbb`. Die folgenden Befunde sind eine Momentaufnahme, keine dauerhaft bestehenden Anforderungen:
 - Live-Website: https://sanitaer-dach-mucha.de/; im Browser bei 1280 × 720 und 390 × 844 betrachtet.
@@ -21,7 +33,7 @@ Analyse vom 10.10.2026, Repository `main` bei Commit `3d887f97a75a7a26af48854acb
 ## Bestehender Tech-Stack und Projektstruktur
 - Next.js `14.1.4` mit App Router, React `^18`, TypeScript `^5` mit `strict: true`.
 - Tailwind CSS `^3.3.0`, PostCSS, Autoprefixer; ESLint 8 und `eslint-config-next` 14.1.4.
-- `@formspree/react` `^2.5.1`, `react-icons` `^5.0.1`, `sharp` `^0.33.3`; `gh-pages` ist installiert, aber ein tatsächlicher Deploymentablauf ist damit nicht nachgewiesen.
+- `@formspree/react` `^2.5.1`, `react-icons` `^5.0.1`, `sharp` `^0.33.3`; `gh-pages` ist für das Deployment über GitHub Pages installiert.
 - `yarn.lock` ist die vorhandene Lockdatei. Nutze Yarn und erhalte diese; keine zweite Lockdatei erzeugen. Die Yarn-Version ist nicht explizit festgelegt und vor Installation zu prüfen.
 - `src/app/page.tsx`: Zusammenstellung der Startseite, derzeit vollständig als Client Component markiert.
 - `src/app/layout.tsx`: Sprache, Schrift und globale Metadaten.
@@ -42,7 +54,7 @@ Analyse vom 10.10.2026, Repository `main` bei Commit `3d887f97a75a7a26af48854acb
 - Keine Laufzeitabhängigkeit von SSR, Server Actions, dynamischen API-Endpunkten oder Next.js-Bildoptimierungsserver einführen.
 - Formspree bleibt der vorhandene externe Versandweg. Keine Zugangsdaten in den Client schreiben; die öffentliche Formular-ID ist kein geheimer API-Schlüssel.
 - `next/image` allein verkleinert bei `unoptimized: true` keine Originaldateien. Bilder vorab optimieren oder exportfähige Varianten/Loader einsetzen.
-- Exportausgabe und tatsächlichen Host prüfen; nicht aus der README-Vercel-Vorlage auf das Hosting schließen.
+- Exportausgabe für GitHub Pages unter `/firma-andreas-mucha/` prüfen; nicht aus der README-Vercel-Vorlage auf das Hosting schließen.
 - Für saubere URLs Host-Rewrites oder eine passende Exportstruktur, etwa geprüfte `trailingSlash`-Konfiguration, festlegen. Vorhandene `.html`-URLs beim Umstieg mit Weiterleitungen erhalten. Direkte Aufrufe und Reloads müssen funktionieren.
 
 ## Gestaltungsrichtung und responsive Darstellung
@@ -59,7 +71,7 @@ Entwickle einen ruhigen, hochwertigen Handwerksauftritt: helle Grundflächen, du
 
 ## Informationsarchitektur und UX
 Startseite: verständlicher Hero mit Firma, Fachgebieten und bestätigter Region; danach kompakte Leistungsübersicht, lesbare Leistungsabschnitte mit passenden Bildern, belegbare Informationen zum Betrieb sowie Kontakt und Footer.
-- Primäre Aktion „Beratung anfragen“ führt zum Kontaktformular; „Anrufen“ als klar erkennbare zweite Kontaktmöglichkeit mit `tel:`-Link. E-Mail als `mailto:`-Link anbieten.
+- Primäre Aktion „Kontakt aufnehmen“ führt zum Kontaktformular; „Anrufen“ als klar erkennbare zweite Kontaktmöglichkeit mit `tel:`-Link. E-Mail als `mailto:`-Link anbieten.
 - Erhalte `#heizung`, `#bad`, `#haustechnik`, `#dach` und `#kontakt`. Bei neuen Leistungsseiten alte Anker weiter bedienen und Navigation konsistent aktualisieren.
 - Gliedere lange Texte in kurze Absätze und sachliche Leistungslisten. Korrigiere Tippfehler und fehlende Wortabstände, ohne fachliche Bedeutung zu verändern.
 - Keine erfundenen Referenzen, Kundenbewertungen, Zertifikate, Meistertitel, Öffnungszeiten, Notdienstangebote oder Garantien. Vorhandene Aussagen zu Förderungen/Kassenleistungen nicht erweitern.

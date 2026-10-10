@@ -1,71 +1,111 @@
-import { useState } from "react";
-import { useForm, ValidationError } from '@formspree/react';
-import { LeistungProps } from "../constants";
-
-const Kontakt = (props: LeistungProps): React.JSX.Element => {
-
-    const [name, setName] = useState('')
-
-    const [state, handleSubmit] = useForm("mvoelkjb", {
-        data: {
-            subject: `Neue Nachricht von ${name}`,
-            pageTitle: function () { return document.title; }
-        }
-    });
-
-    if (state.succeeded) {
-        return <section id={props.id} className="bg-grey-100">
-            <div className="leistung">
-                <div className="header">Kontakt</div>
-                <div className="my-5 w-full">
-                    <div className=" w-1/2 text-center hover:animate-pulse text-4xl text-green-100 mx-auto">Vielen Dank für Ihre Nachricht !</div>
-                    <div className="w-1/2 mt-2 text-left mx-auto">Wir werden uns so schnell wie möglich mit Ihnen in Verbindung setzen.</div>
-                </div>
+"use client";
+import { useEffect, useRef } from "react";
+import { useForm } from "@formspree/react";
+import Link from "next/link";
+import { company, LeistungProps } from "../constants";
+export default function Kontakt({ id }: LeistungProps) {
+  const [state, submit] = useForm("mvoelkjb");
+  const success = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (state.succeeded) success.current?.focus();
+  }, [state.succeeded]);
+  return (
+    <section id={id} className="contact section">
+      <div className="container contact-grid">
+        <div>
+          <p className="eyebrow">Sprechen wir über Ihr Vorhaben</p>
+          <h2>Kontakt aufnehmen.</h2>
+          <p>
+            Rufen Sie uns an oder schreiben Sie uns. Für eine Kesselwartung
+            nennen Sie bitte, soweit bekannt, Hersteller und Modell im Anliegen.
+          </p>
+          <address>
+            <a className="contact-phone" href={company.tel}>
+              {company.phone}
+            </a>
+            <a href={`mailto:${company.email}`}>{company.email}</a>
+            <span>
+              {company.name}
+              <br />
+              {company.street}
+              <br />
+              {company.city}
+            </span>
+          </address>
+        </div>
+        <div>
+          {state.succeeded ? (
+            <div ref={success} className="success" role="status" tabIndex={-1}>
+              <h3>Vielen Dank für Ihre Nachricht.</h3>
+              <p>Ihre Anfrage wurde erfolgreich übermittelt.</p>
             </div>
-        </section>
-    }
-
-    return (
-        <section id={props.id} className="bg-grey-100">
-            <div className="leistung mt-2">
-                <div className="header">Kontakt</div>
-                <div className="mt-3">Bei Anfragen nutzen Sie bitte das Kontaktformular oder schreiben uns per <a className="hover:text-green-200 underline" href="mailto:fa.mucha@web.de">Email:</a> </div>
-                <form onSubmit={handleSubmit}>
-                    <div className="input-row">
-                        <label>Name:</label>
-                        <input id="name" name="name" type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
-                        <ValidationError
-                            prefix="Name"
-                            field="name"
-                            errors={state.errors}
-                        />
-                    </div>
-                    <div className="input-row">
-                        <label>Email:</label>
-                        <input id="email" type="email" name="email" placeholder="Email" />
-                        <ValidationError
-                            prefix="Email"
-                            field="email"
-                            errors={state.errors}
-                        />
-                    </div>
-                    <div className="input-row">
-                        <label>Anliegen:</label>
-                        <textarea id="message" name="message" rows={5} placeholder="Ihr Anliegen..." />
-                        <ValidationError
-                            prefix="Message"
-                            field="message"
-                            errors={state.errors}
-                        />
-                    </div>
-                    <div className="w-full mb-16">
-                        <button type="submit" className="bg-green-200 float-right h-[44px] w-[121px] text-white hover:bg-green-100" disabled={state.submitting}>Absenden</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    )
+          ) : (
+            <form onSubmit={submit} aria-busy={state.submitting}>
+              <p className="form-intro">Alle drei Felder sind erforderlich.</p>
+              <label htmlFor="name">Ihr Name</label>
+              <input
+                id="name"
+                name="name"
+                autoComplete="name"
+                required
+                maxLength={200}
+              />
+              <label htmlFor="email">Ihre E-Mail-Adresse</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                aria-invalid={
+                  state.errors?.getFieldErrors("email").length
+                    ? true
+                    : undefined
+                }
+                aria-describedby={
+                  state.errors?.getFieldErrors("email").length
+                    ? "email-error"
+                    : undefined
+                }
+              />
+              {state.errors?.getFieldErrors("email").length ? (
+                <p id="email-error" className="error">
+                  Bitte prüfen Sie Ihre E-Mail-Adresse.
+                </p>
+              ) : null}
+              <label htmlFor="message">Ihr Anliegen</label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                required
+                maxLength={5000}
+              />
+              <p className="form-note">
+                Zum Versand verwenden wir Formspree.{" "}
+                <Link href="/datenschutz/">Hinweise zum Datenschutz</Link>
+              </p>
+              {state.errors && (
+                <p className="error" role="alert">
+                  Die Nachricht konnte nicht gesendet werden. Bitte prüfen Sie
+                  Ihre Angaben und versuchen Sie es erneut. Sie erreichen uns
+                  auch telefonisch oder per E-Mail.
+                </p>
+              )}
+              <button
+                type="submit"
+                className="button"
+                disabled={state.submitting}
+              >
+                {state.submitting ? "Wird gesendet …" : "Nachricht senden"}
+              </button>
+              <span className="sr-only" role="status">
+                {state.submitting ? "Ihre Nachricht wird gesendet." : ""}
+              </span>
+            </form>
+          )}
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Kontakt
-
